@@ -1,8 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: rgba(32, 33, 36, 1);
     box-sizing: border-box;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    animation: anim-sliding 1s ease-in-out;
+}
+@keyframes anim-sliding {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 .navbar{
     display: flex;
@@ -147,7 +162,7 @@ align-self: self-start;
     padding-right:3rem;
     border-radius: 4px;
 }
-.about-me{
+#about-me{
     margin-top:8rem;
     display: flex;
     
@@ -187,7 +202,7 @@ align-self: self-start;
     margin-right:3.5rem;
 }
 
-.services{
+#services{
     margin-top:200px;
     display: flex;
     flex-direction: column;
@@ -500,7 +515,7 @@ align-self: self-start;
 }
 
 
-.contact{
+#contact{
     
     display: flex;
     flex-direction: column;
@@ -518,10 +533,10 @@ align-self: self-start;
 }
 .details_container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: fit-content;
-    width: 80vw;
+    width: 85vw;
     margin-top:150px;
     margin-bottom: 60px;
 }
@@ -532,7 +547,7 @@ align-self: self-start;
     justify-content: space-around;
     align-items: space-around;
     height: 70vh;
-    width: 25vw;
+    width: 55vw;
 
 }
 
@@ -569,11 +584,29 @@ align-self: self-start;
     
 
 }
+
+@media  screen and (max-width: 850px) {
+    .details_container{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .person_name{
+        width: 50vw;
+    }
+    .person_email{
+        width: 50vw;
+    }
+    .person_message{
+        width: 50vw;
+    }  
+}
 .form{
     outline: none;
     border: none;
      height:92%;
-      width: 90%;
+      width: 20vw;
      background-color: rgba(32, 33, 36, 1);
      font-family: Poppins;
     font-size: 32px;

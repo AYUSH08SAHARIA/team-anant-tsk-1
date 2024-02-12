@@ -1,5 +1,17 @@
 html{
     scroll-behavior: smooth;
+    cursor: url(./assets/hi.cur) ,auto;
+    
+}
+button{
+    cursor: url(./assets/hi2.cur) ,auto;
+    background-color: rgba(32, 33, 36, 1);
+    border-style: none;
+    
+}
+.slider-btn{
+    margin-left: 50vw;
+    padding-right: 1rem;
 }
 body{
     background-color: rgba(32, 33, 36, 1);
@@ -7,6 +19,53 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     animation: anim-sliding 1s ease-in-out;
+    overflow-x: hidden;
+     
+     
+
+.hello{
+        animation: hello 1s ease-in-out;
+    
+    }
+}
+.hello2{
+    animation: hello2 1.5s ease-in-out;
+
+}
+.hello3{
+    animation: hello3 1s ease-in-out;
+
+}
+@keyframes hello {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hello2 {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes hello3 {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 @keyframes anim-sliding {
     0% {
@@ -19,21 +78,36 @@ body{
     }
 
 }
-.navbar{
+#navbar{
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    transition: all 1s ease-in-out;
+    width: 100vw;
+    z-index: 3;
     
+}
+.head-img{
+    height: 50vw;
+}
+.chng{
+    background-color: rgba(255, 165, 136, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
 }
 .logo{
     
     border-radius: 50%;
     overflow: hidden;
+
     margin-left: 100px;
-    margin-top: 55px;
+    margin-top: 30px;
 }
 #logo-1{
-    width: 80px;
+    width: 200px;
     height: 80px;
     
 }
@@ -42,7 +116,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-left: 100px;
-    margin-top: 75px; 
+    margin-top: 45px; 
     list-style: none;
     margin-right: 5rem;
 }
@@ -161,6 +235,17 @@ align-self: self-start;
     padding-left:3rem;
     padding-right:3rem;
     border-radius: 4px;
+}
+.btn-2:hover{
+    background-color: rgba(255, 165, 136, 1);
+    color: rgba(32, 33, 36, 1);
+    border: 2px solid rgba(255, 165, 136, 1);
+}
+.btn-1:hover{
+    color:rgba(255, 165, 136, 1);
+    background-color: rgba(32, 33, 36, 1);
+    border:2px solid rgba(255, 165, 136, 1);
+    
 }
 #about-me{
     margin-top:8rem;
@@ -361,11 +446,11 @@ align-self: self-start;
 
 }
 
-.project_title_holder:hover{
+.project_title_conatiner:hover{
     
    .line3{
     display: block;
-    animation: anime1 0.3s ease-in-out;
+    animation: anime1 0.8s ease-in-out;
     }
 }
 
@@ -383,15 +468,51 @@ align-self: self-start;
     height: fit-content;
     margin: 20px;
     flex-wrap: wrap;
+    animation: animate 0.8s ease-in-out;
     
 
 }
 
 
-.work_container{
-  
 
+.work_card-2{
+    display: none;
+       justify-content: space-around;
+       align-items: center;
+       width: 86vw;
+       height: fit-content;
+       margin: 20px;
+       flex-wrap: wrap;
+       animation: animate 0.8s ease-in-out;
+   
+   }
+
+   .work_card-3{
+    display: none;
+       justify-content: space-around;
+       align-items: center;
+       width: 86vw;
+       height: fit-content;
+       margin: 20px;
+       flex-wrap: wrap;
+       animation: animate 0.8s ease-in-out;
+   
+   }
+
+
+@keyframes animate{
+
+    from{
+        opacity:0;
+        transform: translateY(-170px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
 }
+
+
 .card-2{
     width: 400px;
     height: 40vh;
@@ -419,11 +540,11 @@ align-self: self-start;
 }
 @keyframes anim-appear {
     from {
-        transform: translateY(100px);
+       
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        
         opacity: 0.8;
     }
     
@@ -443,14 +564,11 @@ align-self: self-start;
 
 .reviews{
     margin-top:200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     
 
-    width:100vw;
-    height: fit-content;
+    
+    
     margin-bottom: 100px;
 }
 
@@ -466,29 +584,32 @@ align-self: self-start;
     color: rgba(255, 255, 255, 1);
     margin-left: 15px;
 }
+.slider{
+   display: inline-flex;
+   overflow:hidden;
+   transition: all 0.5s ease-in-out;
 
-.review_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    width: 100vw;
-    overflow: hidden;
-    
+
 }
-.review_card{
-    display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
+
+.transform{
+    
+    transform: translateX(-100vw);
+}
+
+.transform2{
+    transform: translateX(0);
+   
 }
 
 .review{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 75vw;
-      
+    width: 80vw;
     margin-top: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
     
 }
 .profile{
@@ -514,7 +635,9 @@ align-self: self-start;
     color: rgba(255, 165, 136, 1);
 }
 
-
+.hi{
+    height: 50vw;
+}
 #contact{
     
     display: flex;
@@ -528,7 +651,7 @@ align-self: self-start;
     border: 1px solid rgba(255, 165, 136, 1) ;
     width:0px;
     height: 300px;
-    margin-left: 380px;
+    margin-left: 100px;
 
 }
 .details_container{
@@ -598,6 +721,9 @@ align-self: self-start;
     .person_email{
         width: 50vw;
     }
+    .line2{
+        display: none;
+    }
     .person_message{
         width: 50vw;
     }  
@@ -613,4 +739,43 @@ align-self: self-start;
     font-weight: 600;
     color: rgba(255, 165, 136, 1);
     padding-left: 50px;
+}
+
+.nav-items-2{
+    display: none;
+}
+.nav-btn-o{
+    display: none;
+}
+
+
+@media  screen and (max-width:1000px) {
+    .nav-btn-o{
+        display: block;
+    }
+    .nav-items{
+        display: none;
+    }
+    .list-2{
+        margin-top: 25%;
+        margin-left: 35%;
+
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+
+    }
+    .list-2 .list-link{
+        margin-top: 30px;
+    }
+    .nav-items-2{
+        display: none;
+        top: 0;
+        position: absolute;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        transition: all 1s ease-in-out;
+    }
+
 }
